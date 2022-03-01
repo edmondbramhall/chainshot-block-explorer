@@ -6,8 +6,6 @@
       </div>
       <div class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item">
-          </a>
           <div class="navbar-item">
             <div class="field has-addons">
               <p class="control has-icons-left">
@@ -17,7 +15,7 @@
                 </span>
               </p>
               <div class="control">
-                <a @click="showAccount()" class="button">
+                <a @click="showAccount()" class="button" style="text-decoration:none;">
                   Show account
                 </a>
               </div>

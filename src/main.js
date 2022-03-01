@@ -63,6 +63,9 @@ const store = createStore({
             const balance = await _provider.getBalance(payload.address);
             return ethers.utils.formatEther(balance);
         },
+        async fetchTransaction(context, payload) {
+            return await _provider.getTransaction(payload.txHash);
+        },
         async getBlock(context, payload) {
             return await context.state.blocks.find(b => {
                 return b.hash === payload.hash;

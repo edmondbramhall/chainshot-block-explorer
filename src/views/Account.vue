@@ -7,25 +7,20 @@
       </div>
     </section>
     <section class="section">
-      <table class="table is-striped is-bordered">
-        <thead>
-
-        </thead>
-      </table>
-      <RouterLink to="/" class="button is-primary">Back</RouterLink>
+      <a @click="$router.go(-1)" class="button is-primary">Back</a>
     </section>
   </div>
 </template>
 <script>
+import utils from '../mixins/utils.js'
 export default {
+  mixins: [utils],
   data() {
     return {  
       accountLoaded: false,
       hash: null,
       balance: 0
     }
-  },
-  methods: {
   },
   async mounted() {
     this.hash = this.$route.params.hash;
